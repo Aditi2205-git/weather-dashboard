@@ -1,0 +1,81 @@
+body{
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  height:100vh;
+  background: linear-gradient(135deg,#667eea,#764ba2);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding-top:40px;
+}
+
+h1{
+  color:white;
+  margin-bottom:20px;
+}
+
+#weather-container{
+  display:flex;
+  gap:25px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+/* Glass Card */
+
+.card{
+  backdrop-filter: blur(15px);
+  background: rgba(255,255,255,0.15);
+  border-radius:16px;
+  padding:25px;
+  width:220px;
+  text-align:center;
+  color:white;
+  box-shadow:0 8px 25px rgba(0,0,0,0.2);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.03);
+}
+
+.city{
+  font-size:22px;
+  font-weight:bold;
+}
+
+.temp{
+  font-size:38px;
+  margin:10px 0;
+}
+
+.icon{
+  font-size:42px;
+}
+
+.condition{
+  font-size:18px;
+}
+
+/* Loader */
+
+.loader{
+  border:6px solid rgba(255,255,255,0.3);
+  border-top:6px solid white;
+  border-radius:50%;
+  width:45px;
+  height:45px;
+  animation:spin 1s linear infinite;
+  margin-top:30px;
+}
+
+@keyframes spin{
+  0%{transform:rotate(0deg)}
+  100%{transform:rotate(360deg)}
+}
+
+.error{
+  color:#ffb3b3;
+  margin-top:20px;
+  font-size:18px;
+}
